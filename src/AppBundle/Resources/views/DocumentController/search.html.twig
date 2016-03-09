@@ -1,0 +1,13 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}AppBundle:DocumentController:search{% endblock %}
+
+{% block body %}
+<h1>Symfoogle Results for {{query}}</h1>
+{%for document in documents%}
+	<a href="{{ asset('uploads/' ~ document.fileName) }}"><p>{{document.title}}</p></a>
+
+{%else%}
+	<p>No Results found</p>
+{%endfor%}
+{% endblock %}

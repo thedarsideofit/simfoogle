@@ -1,0 +1,13 @@
+{% extends "::base.html.twig" %}
+
+{% block title %}AppBundle:DocumentController:index{% endblock %}
+
+{% block body %}
+<h1>Welcome to Symfoogle</h1>
+<p>You Can search files preloaded by fixtures</p>
+<p>You can use two search engines Mysql and Elastic Search</p>
+<p>Examples</p>
+<ul><li><a href="{{ path('search', {engine: 'elastic', query:'fowler'}) }}" target="blank">Search fowler term by elastich search http://hostname/{engine}/search/{term}</a></li>
+<li>
+<a href="{{ path('search', {engine: 'database', query:'fowler'}) }}" target="blank">Search fowler term by database search http://hostname/{engine}/search/{term}</a></li>
+{% endblock %}
